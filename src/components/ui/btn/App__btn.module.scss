@@ -1,0 +1,41 @@
+@import "../../../App";
+
+.wrap {
+  @include position( relative );
+  width: 240px;
+  height: 68px;
+  cursor: pointer;
+}
+
+.text {
+  z-index: 10;
+  position: absolute;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.bg_1 {
+  @include position( absolute );
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 230px;
+  height: 58px;
+  background-color: #FFCC60;
+}
+
+.bg_2 {
+  @include position( absolute );
+  width: 230px;
+  height: 58px;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  @include display( flex );
+  @include justify-content( center );
+  @include align-items( center );
+}

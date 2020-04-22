@@ -1,0 +1,15 @@
+@import "../../../../App";
+
+.left, .right {
+  width: 67px !important;
+  height: 67px !important;
+  @include display( flex );
+  @include justify-content( center );
+  @include align-items( center );
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.right .svg {
+  @include transform( rotate(180deg) );
+}

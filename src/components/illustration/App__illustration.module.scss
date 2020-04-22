@@ -1,0 +1,29 @@
+@import "../../App";
+
+.width_850 {
+  @include display( none )
+}
+
+@media screen and ( max-width: 850px ) {
+  .width_850 {
+    @include display( block )
+  }
+
+  .standart {
+    @include display( none )
+  }
+}
+
+.width_700 {
+  @include display( none )
+}
+
+@media screen and ( max-width: 700px ) {
+  .width_700 {
+    @include display( block );
+  }
+
+  .width_850 {
+    @include display( none )
+  }
+}

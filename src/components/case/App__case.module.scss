@@ -1,0 +1,206 @@
+@import "../../App";
+
+// wrapper
+
+.wrap {
+  width: 320px;
+  height: 455px;
+  position: relative;
+
+  &:nth-child( even ) {
+
+    .content__dot {
+      background-color: #FECB60;
+    }
+
+    .down_bar {
+      background-color: #47AF71;
+    }
+
+    svg {
+      fill: #FECB60;
+    }
+
+    .text_btn {
+      color: #2C2F33;
+    }
+    
+    .price {
+      color: #fff;
+    }
+  }
+
+  &__text {
+    @include display( flex );
+    @include flex-direction( column );
+    @include align-items( center )
+  }
+}
+
+.container {
+  @include display( flex );
+  @include flex-direction( column );
+  @include align-items( center );
+  @include justify-content( space-between );
+  padding-top: 40px;
+  width: 100%;
+  height: 446px;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.content {
+  margin-top: 30px;
+  max-width: 270px;
+  width: 100%;
+  @include display( grid );
+  @include grid-row-gap( 18px );
+
+  &__wrap {
+    @include display( grid );
+    @include grid-template-columns( 6px 1fr );
+    align-self: start;
+  }
+
+  &__text {
+    margin-left: 14px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2C2F33;
+  }
+
+  &__dot {
+    margin-top: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #47AF71;
+  }
+}
+
+// text option
+
+.price {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2C2F33;
+  margin-right: 25px;
+}
+
+.title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2C2F33;
+}
+
+// down panel bar
+
+.down_bar {
+  cursor: pointer;
+  @include display( flex );
+  @include align-items( center );
+  @include justify-content( flex-end );
+  width: 100%;
+  height: 58px;
+  background-color: #FECB60;
+}
+
+// btn
+
+svg {
+  fill: #47AF71;
+}
+
+.text_btn {
+  @include position( absolute );
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.icon {
+  @include display( flex );
+  @include justify-content( center );
+  @include align-items( center );
+  @include position( absolute );
+  bottom: 0;
+  left: 10px;
+}
+
+.width_560 {
+  @include display( none );
+}
+
+@media screen and ( max-width: 560px ) {
+  .width_560 {
+    @include display( block );
+  }
+
+  .svg {
+    @include display( none );
+  }
+
+  .wrap {
+    width: 230px;
+    height: 337px;
+  }
+
+  .title {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .content {
+    margin-top: 20px;
+    width: 194px;
+    @include grid-row-gap( 16px );
+
+    &__text {
+      font-size: 9px;
+      line-height: 11px;
+    }
+
+    &__dot {
+      width: 5px;
+      height: 5px;
+    }
+  }
+
+  .price {
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  .text_btn {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .icon {
+    bottom: -2px;
+    left: 6px;
+  }
+
+  .container {
+    padding-top: 30px;
+    height: 332px;
+  }
+
+  .down_bar {
+    width: 230px;
+    height: 42px;
+  }
+}

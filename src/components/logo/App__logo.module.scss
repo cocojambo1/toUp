@@ -1,0 +1,15 @@
+@import "../../App";
+
+.svg {
+  @include display( none )
+}
+
+@media screen and ( max-width: 380px ) {
+  .width {
+    @include display( none );
+  }
+
+  .svg {
+    @include display( block )
+  }
+}

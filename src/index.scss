@@ -1,0 +1,84 @@
+@import "./App";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.carousel {
+  z-index: 1;
+  width: 1254px;
+  height: 250px;
+
+  .BrainhubCarousel {
+    width: 1254px !important;
+  }
+}
+
+.width_1270 {
+  @include display( none );
+}
+
+.slider {
+  @include display( none );
+  width: 285px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  .BrainhubCarousel {
+    width: 285px !important;
+  }
+}
+
+.width_560 {
+  @include display( none );
+}
+
+@media screen and ( max-width: 1270px ) {
+  .width_1270 {
+    @include display( block );
+
+    z-index: 1;
+    width: 544px;
+    height: 250px;
+
+    .BrainhubCarousel {
+      width: 544px !important;
+    }
+  }
+
+  .carousel {
+    @include display( none )
+  }
+}
+
+@media screen and ( max-width: 560px ) {
+  .slider {
+    @include display( block );
+  }
+
+  .width_1270 {
+    @include display( none )
+  }
+
+  .width_560 {
+    @include display( block );
+    width: 285px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    .BrainhubCarousel {
+      width: 285px !important;
+    }
+  }
+}

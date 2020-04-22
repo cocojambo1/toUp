@@ -99,3 +99,19 @@
   -ms-flex-direction: $option;
   flex-direction: $option;
 }
+
+@mixin grid-template-columns( $option ) {
+  -webkit-grid-template-columns: $option;
+  -moz-grid-template-columns: $option;
+  -o-grid-template-columns: $option;
+  -ms-grid-template-columns: $option;
+  grid-template-columns: $option;
+}
+
+@mixin overflow( $option ) {
+  -webkit-overflow: $option;
+  -moz-overflow: $option;
+  -o-overflow: $option;
+  -ms-overflow: $option;
+  overflow: $option;
+}
